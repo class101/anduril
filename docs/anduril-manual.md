@@ -68,7 +68,8 @@ this is where it redirects to:
 
 After putting a battery in the light and tightening the parts together,
 the light should quickly blink once to confirm it has power and is now
-operational.  After that, basic usage is simple:
+operational.  
+After that, basic usage is simple:
 
 - **Click** to turn the light on or off.
 - **Hold** the button to change brightness.
@@ -91,11 +92,12 @@ Button presses are abbreviated using a simple notation:
 - `3C`: **Three clicks.**  Press and release quickly, three times.
 - `3H`: **Click, click, hold.**  Click three times, but hold the final press.
 
-The same pattern is used with higher numbers too.  For example, `10C`
-means ten clicks...  and `10H` means ten clicks but hold the final press.
+The same pattern is used with higher numbers too.  
+For example, `10C` means ten clicks...  and `10H` means ten clicks but hold the
+final press.
 
-The *number* is how many times to press the button.  The *letter* tells
-whether to release the final press (C) or keep holding it (H).
+The *number* is how many times to press the button.  
+The *letter* tells whether to release the final press (C) or keep holding it (H).
 
 ## Factory Reset
 
@@ -247,22 +249,22 @@ Advanced UI's ramp.
 There are four ways to access ramping mode when the light is off:
 
 - `1C`: Turn on at the memorized brightness.  
-  (see below for details about what "memorized" means)
-- `1H`: Turn on at the floor level.  Let go after the light turns on to
-  stay at the floor level, or keep holding to ramp up.
+    (see below for details about what "memorized" means)
+- `1H`: Turn on at the floor level. Let go after the light turns on to
+stay at the floor level, or keep holding to ramp up.
 - `2C`: Turn on at the ceiling level.
-- `2H`: Turn on at full power, turn off when released.  (momentary turbo)
+- `2H`: Turn on at full power, turn off when released.  (momentary turbo)  
       (in Simple UI, this uses the ceiling level instead of turbo)
 
 While the light is on, a few actions are available:
 
 - `1C`: Turn off.
 - `2C`: Go to or from the turbo level.  
-        (or if it has regulated down, "bump" back up to turbo)  
-        (turbo level / behavior is configurable)
+    (or if it has regulated down, "bump" back up to turbo)  
+    (turbo level / behavior is configurable)
 - `1H`: Change brightness (up).  
-        If the button was released less than a second ago, or if it's already
-        at the ceiling, it goes down instead.
+        If the button was released less than a second ago  
+        Or if it's already at the ceiling, it goes down instead.
 - `2H`: Change brightness (down).
 - `3C`: Switch to the other ramp style.  (smooth / stepped)  
         (or activate the next channel mode, when more than one is enabled)  
@@ -279,18 +281,18 @@ While the light is on, a few actions are available:
       - Item 2: Ceiling level.
       - Item 3:  
       Stepped ramp: Number of steps.  Can be 1 to 150.  
-      Smooth ramp: Ramp speed.  
-        1 = Full speed, ~2.5s from end to end.  
-        2 = Half speed, ~5s from end to end.  
-        3 = Third speed, ~7.5s.  
-        4 = Quarter speed, ~10s.
+      Smooth ramp: Ramp speed.
+        - 1 = Full speed, ~2.5s from end to end.
+        - 2 = Half speed, ~5s from end to end.
+        - 3 = Third speed, ~7.5s.
+        - 4 = Quarter speed, ~10s.
 - `10C`: Activate manual memory and save the current brightness.
 - `10H`: Ramp extras config menu.
       - Item 1: Disable manual memory and go back to automatic memory.  
               (doesn't matter what value the user enters at the prompt)
       - Item 2: Configure the manual memory timer.  
-              Sets the timer to N minutes, where N is the number of
-              clicks.  A value of 0 (no clicks) turns the timer off.
+              Sets the timer to N minutes, where N is the number of clicks.  
+              A value of 0 (no clicks) turns the timer off.
       - Item 3: Configure whether to ramp up after `Off -> 1H`.  
               0: Ramp up after moon.  
               1: Don't ramp up, just stay at the floor level.
@@ -392,7 +394,7 @@ quick tasks without having to unlock the light.  The brightness in
 lockout mode has two levels:
 
 - `1H`: Light up at the lowest floor level.
-- `2H`: Light up at the highest floor level.
+- `2H`: Light up at the highest floor level.  
         (or the manual mem level, if there is one)
 - `3H`: Next channel mode (if more than one is enabled).
 
@@ -402,8 +404,8 @@ action to activate the auto-lock config menu.  Release the button after
 the first blink.  Then at the prompt, click N times to set the auto-lock
 timeout to N minutes.
 
-- `10H`: Auto-lock config menu.  Click N times to set timeout to N minutes.
-           A value of zero disables the auto-lock feature.
+- `10H`: Auto-lock config menu.  Click N times to set timeout to N minutes.  
+           A value of zero disables the auto-lock feature.  
            So, to turn off auto-lock, don't click at all.
 
 And on lights which have aux LEDs, there may be additional functions:
@@ -449,29 +451,28 @@ to blink out numbers.
 
 The voltage config menu has these settings:
 
-  1. Voltage correction factor.  This adjusts the battery
-     measurement sensor, allowing the user to add or subtract up to
-     0.30V in 0.05V steps.  Click N times to enter a value:
-
-     `1C`: -0.30V  
-     `2C`: -0.25V  
-     `3C`: -0.20V  
-     `4C`: -0.15V  
-     `5C`: -0.10V  
-     `6C`: -0.05V  
-     `7C`: default, 0V  
-     `8C`: +0.05V  
-     `9C`: +0.10V  
-     `10C`: +0.15V  
-     `11C`: +0.20V  
-     `12C`: +0.25V  
-     `13C`: +0.30V
-
-  2. Post-off voltage display timeout.  (only on lights with RGB aux)  
-     This setting determines how many seconds the RGB aux LEDs
-     display the voltage color after the torch goes to sleep.  Click
-     once per desired second, or zero times to turn this function
-     off.
+1. Voltage correction factor.
+    This adjusts the battery measurement sensor,
+    allowing the user to add or subtract up to 0.30V in 0.05V steps.
+    Click N times to enter a value:
+        `1C`: -0.30V  
+        `2C`: -0.25V  
+        `3C`: -0.20V  
+        `4C`: -0.15V  
+        `5C`: -0.10V  
+        `6C`: -0.05V  
+        `7C`: default, 0V  
+        `8C`: +0.05V  
+        `9C`: +0.10V  
+        `10C`: +0.15V  
+        `11C`: +0.20V  
+        `12C`: +0.25V  
+        `13C`: +0.30V
+2. Post-off voltage display timeout.  (only on lights with RGB aux)  
+    This setting determines how many seconds the RGB aux LEDs
+    display the voltage color after the torch goes to sleep.  Click
+    once per desired second, or zero times to turn this function
+    off.
 
 #### Temperature check
 
@@ -483,15 +484,18 @@ factory reset to auto-calibrate the sensor.
 
 The thermal config menu has two settings:
 
-- Current temperature.  Click once per degree C to calibrate the
-    sensor.  For example, if the ambient temperature is 21 C, then
+- Current temperature.  
+    Click once per degree C to calibrate the sensor.  
+    For example, if the ambient temperature is 21 C, then
     click 21 times.
 
-- Temperature limit.  This sets the maximum temperature the light
+- Temperature limit.  
+    This sets the maximum temperature the light
     can reach before it will start doing thermal regulation to keep
-    itself from overheating.  Click once per degree C above 30.  For
-    example, to set the limit to 50 C, click 20 times.  The default is
-    45 C, and the highest value it will allow is 70 C.
+    itself from overheating.  
+    Click once per degree C above 30.  
+    For example, to set the limit to 50 C, click 20 times.  
+    The default is 45 C, and the highest value it will allow is 70 C.
 
 #### Beacon mode
 
@@ -500,11 +504,11 @@ stays off until the next blink.  The brightness and the number of
 seconds between pulses are configurable:
 
 - Brightness is the user's memorized ramp level, so set this in
-    ramping mode before activating beacon mode.  Follows the same
-    memory rules as ramping -- automatic, manual, or hybrid.
-- Speed is configured by holding the button.  The light should
-    blink once per second while holding the button.  Release it
-    after the desired amount of time has passed, to set a new beacon
+    ramping mode before activating beacon mode.  
+    Follows the same memory rules as ramping -- automatic, manual, or hybrid.
+- Speed is configured by holding the button.  
+    The light should blink once per second while holding the button.  
+    Release it after the desired amount of time has passed, to set a new beacon
     speed.  
     For example, to do a 10-second alpine beacon, hold the button
     for 10 seconds.
@@ -527,8 +531,9 @@ Anduril includes a few extra modes for a variety of purposes:
 - Lightning storm mode
 
 Click 3 times from Off to access these, but hold the third click for a
-moment.  Click, click, hold.  The last-used strobe mode is remembered,
-so it will return to whichever one you used last.
+moment.  
+Click, click, hold.  
+The last-used strobe mode is remembered, so it will return to whichever one you used last.
 
 In all of these modes, a few actions are available:
 
@@ -537,7 +542,7 @@ In all of these modes, a few actions are available:
 - `1H`: Increase brightness, or strobe faster.  (except lightning)
 - `2H`: Decrease brightness, or strobe slower.  (except lightning)
 - `4C`: Previous strobe / mood mode.
-- `5C`: Go to momentary mode, for a momentary strobe.
+- `5C`: Go to momentary mode, for a momentary strobe.  
     (this is useful for light painting)
 
 Additionally, candle mode has one more action:
@@ -546,32 +551,34 @@ Additionally, candle mode has one more action:
 
 In more detail, here is what each mode does:
 
-- Candle mode
-    Brightness changes randomly in a pattern resembling a candle flame.
+- Candle mode  
+    Brightness changes randomly in a pattern resembling a candle flame.  
     If a timer is set, it will run until the timer expires, then get
-    dimmer for one minute, then sputter and turn itself off.  Without a
-    timer, candle mode runs until the user turns it off.  Brightness is
-    configurable.
-- Bike flasher
+    dimmer for one minute, then sputter and turn itself off.  
+    Without a timer, candle mode runs until the user turns it off.  
+    Brightness is configurable.
+- Bike flasher  
    Runs at a medium level, but stutters to a brighter level once per
-   second.  Designed to be more visible than a normal ramping mode, but
-   otherwise works mostly the same.  Brightness is configurable.
-- Party strobe
-   Motion-freezing strobe light.  Can be used to freeze spinning fans
-   and falling water.Speed is configurable.
-- Tactical strobe
-   Disorienting strobe light.  Can be used to irritate people.  Speed
-   is configurable, and the duty cycle is always 33%.
-
+   second.  
+   Designed to be more visible than a normal ramping mode, but
+   otherwise works mostly the same.  
+   Brightness is configurable.
+- Party strobe  
+   Motion-freezing strobe light.  
+   Can be used to freeze spinning fans and falling water.Speed is configurable.
+- Tactical strobe  
+   Disorienting strobe light.  
+   Can be used to irritate people.  
+   Speed is configurable, and the duty cycle is always 33%.
    Be careful about heat in this mode, if using it for a long time.
-- Police strobe (on some lights)
-   2-color police style strobe.  Only works on lights with 2 or more
-   colors.
-- Lightning storm mode
+- Police strobe (on some lights)  
+   2-color police style strobe.  
+   Only works on lights with 2 or more colors.
+- Lightning storm mode  
    Flashes at random brightness and random speed to simulate lightning
-   strikes during a busy lightning storm.  Do not look directly at the
-   flashlight when this mode is running, because it may suddenly go to
-   full power without warning.
+   strikes during a busy lightning storm.  
+   Do not look directly at the flashlight when this mode is running, because
+   it may suddenly go to full power without warning.
 
 ### Momentary Mode
 
@@ -579,13 +586,13 @@ Click 5 times from Off to enter Momentary mode.  Or 5 times from Ramp,
 or 5 times from a strobe mode.
 
 This locks the flashlight into a single-mode interface where the LEDs
-are only on when the button is held down.  It is intended for Morse
-code, light painting, and other tasks where the light should be on only
-for a short time and probably in a pattern.
+are only on when the button is held down.  
+It is intended for Morse code, light painting, and other tasks where the light
+should be on only for a short time and probably in a pattern.
 
 Momentary mode does either a steady brightness level or a strobe,
-depending on which was active before going to momentary mode.  To select
-which one, go to the mode you want to use, adjust the brightness and
+depending on which was active before going to momentary mode.  
+To select which one, go to the mode you want to use, adjust the brightness and
 speed and other settings, then click 5 times to enter momentary mode.
 
 In steady mode, brightness is the memorized ramp level, so adjust that
@@ -603,7 +610,8 @@ Click 6 times from Off to enter Tactical Mode, or 6 times in Tactical
 Mode to exit and go back to "Off".
 
 Tactical Mode provides instant momentary access to high, low, and
-strobe, but each of these is configurable.  The inputs are:
+strobe, but each of these is configurable.  
+The inputs are:
 
 - `1H`: High
 - `2H`: Low
@@ -620,8 +628,10 @@ Other commands in Tactical Mode are:
       - 3rd blink: configure tactical slot 3
 
 To change what is in a tactical slot, press `7H`, then release the button
-after the 1st, 2nd, or 3rd blink.  Then enter a number.  Each click adds
-1, and each hold adds 10.  The number can be:
+after the 1st, 2nd, or 3rd blink.  
+Then enter a number.  
+Each click adds 1, and each hold adds 10.  
+The number can be:
 
 - 1 to 150: set the brightness level
 - 0: last-used strobe mode
@@ -631,9 +641,9 @@ after the 1st, 2nd, or 3rd blink.  Then enter a number.  Each click adds
     153+ = other strobes, in the same order they're in in the `Off -> 3H`
            strobe group
 
-This assumes the light has a ramp 150 levels long.  Strobe modes start
-at the ramp size plus 1, so it may be different if a light has a
-different ramp size.
+This assumes the light has a ramp 150 levels long.  
+Strobe modes start at the ramp size plus 1, so it may be different if a light
+has a different ramp size.
 
 ### Configuration Menus
 
@@ -641,22 +651,24 @@ Every config menu has the same interface.  It has one or more options
 the user can configure, and it will go through them in order.  For each
 menu item, the light follows the same pattern:
 
-- Blink once, then go to a lower brightness.  The user can keep
-  holding the button to skip this menu item, or release the button to
-  dive in and enter a new value.
+- Blink once, then go to a lower brightness.  
+The user can keep holding the button to skip this menu item, or release
+the button to dive in and enter a new value.
 - If the user released the button:
       - Stutter or "buzz" quickly between two brightness levels for a few
-        seconds.  This indicates that the user can click one or more times
-        to enter a number.  It will keep buzzing until the user stops
-        clicking, so there is no need to hurry.  
+        seconds.  
+        This indicates that the user can click one or more times
+        to enter a number.  
+        It will keep buzzing until the user stops clicking,
+        so there is no need to hurry.  
       The actions here are:
           - click: add 1
           - hold: add 10  (only in versions 2021-09 or later)
           - wait: exit
 
 After entering a number, or after skipping every menu item, it waits
-until the button is released then exits the menu.  It should return to
-whatever mode the light was in before entering the config menu.
+until the button is released then exits the menu.  
+It should return to whatever mode the light was in before entering the config menu.
 
 ### Ramp Config Menu
 
