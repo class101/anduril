@@ -1,6 +1,6 @@
 # How to build Anduril 2 PDF/HTML manuals from Markdown
 
-## Summary
+## Table of Content
 
 <!-- MarkdownTOC -->
 
