@@ -1,5 +1,18 @@
 # How to build Anduril 2 PDF/HTML manuals from Markdown
 
+## Summary
+
+<!-- MarkdownTOC -->
+
+- [Requirements](#requirements)
+- [Recommended Markdown editor and linter](#recommended-markdown-editor-and-linter)
+- [Build](#build)
+    - [PDF](#pdf)
+    - [HTML](#html)
+    - [DOC](#doc)
+
+<!-- /MarkdownTOC -->
+
 ## Requirements
 
 - pandoc : <https://pandoc.org/installing.html>
@@ -61,6 +74,21 @@ pandoc anduril-manual.md \
 
 Or with the MarkdowPreview : Save To HTML plugin from the awesome SublimeText
 is beautiful too, a version is provided in anduril-manual-2.html
+
+### DOC
+
+```bash
+pandoc anduril-manual.md \
+-f markdown -t docx \
+-V geometry:margin=1.5cm \
+--toc \
+-V linkcolor:blue \
+-o anduril-manual.docx
+```
+
+---
+
+That's all folks.
 
 I use Arch btw :)
 

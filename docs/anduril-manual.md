@@ -27,10 +27,12 @@ this is where it redirects to:
 - [Button presses](#button-presses)
 - [Factory Reset](#factory-reset)
 - [Simple UI](#simple-ui)
+    - [Simple UI Diagram](#simple-ui-diagram)
     - [Usage](#usage)
     - [Extended Simple UI](#extended-simple-ui)
     - [Configuring Simple UI](#configuring-simple-ui)
 - [Advanced UI](#advanced-ui)
+    - [Advanced UI Diagram](#advanced-ui-diagram)
     - [Ramping / Stepped Ramping Modes](#ramping--stepped-ramping-modes)
     - [Sunset Timer](#sunset-timer)
     - [Other Modes](#other-modes)
@@ -61,6 +63,8 @@ this is where it redirects to:
         - [Momentary Mode](#momentary-mode-1)
         - [Tactical Mode](#tactical-mode-1)
         - [Config Menus](#config-menus)
+- [Appendix A: Anduril 2 Simple UI Diagram](#appendix-a-anduril-2-simple-ui-diagram)
+- [Appendix B: Anduril 2 Advanced UI Diagram](#appendix-b-anduril-2-advanced-ui-diagram)
 
 <!-- /MarkdownTOC -->
 
@@ -142,6 +146,12 @@ crazy disco modes.
 Simple UI has all the basic functions needed to work as a flashlight,
 but the minimum and maximum brightness are limited by default to make it
 safer, and any complex or advanced functions are blocked.
+
+### Simple UI Diagram
+
+For the Simple UI Diagram of Anduril v2 please check
+[Appendix A: Anduril 2 Simple UI Diagram](#appendix-a-anduril-2-simple-ui-diagram) at the end of
+this file.
 
 ### Usage
 
@@ -232,6 +242,12 @@ and they will carry over to Simple UI:
 
 Most of the information below this is for the Advanced UI.  Anything not
 already noted above is blocked in the Simple UI.
+
+### Advanced UI Diagram
+
+For the Advanced UI Diagram of Anduril v2 please check
+[Appendix B: Anduril 2 Advanced UI Diagram](#appendix-b-anduril-2-advanced-ui-diagram) at the end of
+this file.
 
 ### Ramping / Stepped Ramping Modes
 
@@ -1107,3 +1123,15 @@ This is a table of all button mappings in Anduril, in one place:
 |                |        |         | (goes to Number Entry menu)
 | Number entry   | Full   | Click   | Add 1 to value for current item
 | Number entry   | Full   | Hold    | Add 10 to value for current item
+
+## Appendix A: Anduril 2 Simple UI Diagram
+
+The following diagrams is authored by containerfan <https://github.com/containerfan/anduril2-diagrams>
+
+![Anduril 2 Simple UI Diagram](https://raw.githubusercontent.com/containerfan/anduril2-diagrams/main/Anduril2_Simple.svg)
+
+## Appendix B: Anduril 2 Advanced UI Diagram
+
+The following diagrams is authored by containerfan <https://github.com/containerfan/anduril2-diagrams>
+
+![Anduril 2 Advanced UI Diagram](https://raw.githubusercontent.com/containerfan/anduril2-diagrams/main/Anduril2_Advanced.svg)
