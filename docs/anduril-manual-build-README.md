@@ -17,10 +17,10 @@
 
 - pandoc : <https://pandoc.org/installing.html>
 - esvogel : <https://github.com/Wandmalfarbe/pandoc-latex-template>
-- Linux :
-      - TexLive with core, fonts, latex
-- Windows :
-      - MiKTeX
+- Linux :  
+    - TexLive with core, fonts, latex
+- Windows (untested, I use Arch Linux) :  
+    - MiKTeX
 
 ## Recommended Markdown editor and linter
 
@@ -29,11 +29,13 @@ HTML and PDF, and improves various quality of life features.
 
 - Sublime Text
 - Sublime Text Plugins :
-      - MarkdownTOC
-      - MarkdowPreview
-      - SublimeLinter
-      - SublimeLinter-contrib-markdownlint
-          - markdownlint-cli
+    - MarkdownTOC
+    - MarkdowPreview
+    - MarkdowLivePreview
+    - SublimeLinter
+    - SublimeLinter-contrib-markdownlint
+        - markdownlint-cli
+    - Pandoc plugin
 
 ## Build
 
