@@ -15,8 +15,7 @@ venv/
 *.elf
 *.hex
 *.html
-!docs/anduril-manual-2.html
-!docs/anduril-manual.html
+!README.html
 *.o
 *.old
 *.otl
