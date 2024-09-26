@@ -8,7 +8,7 @@
 - [Recommended Markdown editor and linter](#recommended-markdown-editor-and-linter)
 - [Build](#build)
     - [PDF](#pdf)
-    - [HTML](#html)
+    - [HTML5](#html5)
     - [DOC](#doc)
 
 <!-- /MarkdownTOC -->
@@ -42,50 +42,61 @@ HTML and PDF, and improves various quality of life features.
 ### PDF
 
 ```bash
-pandoc anduril-manual.md \
+export REPO=class101
+pandoc README.md \
+docs/anduril-manual.md \
+docs/per-user-config.md \
+docs/which-hex-file.md \
+--data-dir=/usr/share/pandoc/data \
+--resource-path=docs \
 -f markdown -t pdf \
 --template eisvogel \
 --listings \
 -V book \
--o anduril-manual.pdf
+-o README.pdf 
 ```
 
-_esvogel requires the following fixes as of writing, very trivial to do it
-yourself_  
-<https://github.com/Wandmalfarbe/pandoc-latex-template/issues/391#issuecomment-2195937041>
+### HTML5
 
-or
+- --css=styling-benjam.css \
+- --css=styling-killercup.css \
 
 ```bash
-pandoc anduril-manual.md \
--f markdown -t pdf \
---toc \
+export REPO=class101
+sed -E -i 's#\(([^\)]+?\.md)\)#(https://github.com/'"$REPO"'/anduril-manual-pdf/tree/trunk/\1)#g' README.md
+pandoc README.md \
+docs/anduril-manual.md \
+docs/per-user-config.md \
+docs/which-hex-file.md \
+--css=styling-benjam.css \
+-s \
+-V lang=en \
+-V highlighting-css= \
 -V linkcolor:blue \
--o anduril-manual.pdf
-```
-
-### HTML
-
-```bash
-pandoc anduril-manual.md \
--f markdown -t html \
+--mathjax \
+--resource-path=docs \
+-f markdown -t html5 \
 --toc \
--V linkcolor:blue \
--o anduril-manual.html
+-o README.html
+sed -E -i 's#https://github.com/'"$REPO"'/anduril-manual-pdf/tree/trunk/##g' README.md
 ```
-
-Or with the MarkdowPreview : Save To HTML plugin from the awesome SublimeText
-is beautiful too, a version is provided in anduril-manual-2.html
 
 ### DOC
 
 ```bash
-pandoc anduril-manual.md \
+export REPO=TKlamp
+sed -E -i 's#\(([^\)]+?\.md)\)#(https://github.com/'"$REPO"'/anduril-manual-pdf/tree/trunk/\1)#g' README.md
+pandoc README.md \
+docs/anduril-manual.md \
+docs/per-user-config.md \
+docs/which-hex-file.md \
+--resource-path=docs \
 -f markdown -t docx \
 -V geometry:margin=1.5cm \
 --toc \
 -V linkcolor:blue \
--o anduril-manual.docx
+-o README.docx
+sed -E -i 's#https://github.com/'"$REPO"'/anduril-manual-pdf/tree/trunk/##g' README.md
 ```
 
 ---
