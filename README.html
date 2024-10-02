@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Selene ToyKeeper" />
+  <meta name="author" content="© Selene ToyKeeper" />
   <meta name="dcterms.date" content="2024-08-22" />
   <meta name="keywords" content="Anduril, Flashlight" />
   <title>Anduril User Manual</title>
@@ -29,7 +29,7 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Anduril User Manual</h1>
-<p class="author">Selene ToyKeeper</p>
+<p class="author">© Selene ToyKeeper</p>
 <p class="date">2024-08-22</p>
 </header>
 <nav id="TOC" role="doc-toc">
@@ -38,6 +38,9 @@
 id="toc-anduril-flashlight-firmware-fsm-flashlight-ui-toolkit">Anduril
 Flashlight Firmware + FSM Flashlight UI Toolkit</a>
 <ul>
+<li><a href="#table-of-content---anduril-readme"
+id="toc-table-of-content---anduril-readme">Table of Content - Anduril
+README</a></li>
 <li><a href="#using-anduril" id="toc-using-anduril">Using
 Anduril</a></li>
 <li><a href="#flashing-firmware" id="toc-flashing-firmware">Flashing
@@ -45,7 +48,7 @@ Firmware</a></li>
 <li><a href="#compiling" id="toc-compiling">Compiling</a>
 <ul>
 <li><a href="#prerequisites"
-id="toc-prerequisites">Prerequisites:</a></li>
+id="toc-prerequisites">Prerequisites</a></li>
 <li><a href="#building" id="toc-building">Building</a></li>
 </ul></li>
 <li><a href="#customizing-settings-per-user"
@@ -62,8 +65,9 @@ Programs</a>
 <li><a href="#anduril-user-manual" id="toc-anduril-user-manual">Anduril
 User Manual</a>
 <ul>
-<li><a href="#table-of-content" id="toc-table-of-content">Table of
-Content</a></li>
+<li><a href="#table-of-content---anduril-manual"
+id="toc-table-of-content---anduril-manual">Table of Content - Anduril
+MANUAL</a></li>
 <li><a href="#quick-start" id="toc-quick-start">Quick Start</a></li>
 <li><a href="#button-presses" id="toc-button-presses">Button
 presses</a></li>
@@ -141,6 +145,27 @@ any F word you like, such as “Flashlight” or whatever suits your mood.
 FSM also means “Finite State Machine”, which is the type of abstraction
 used for defining user interfaces. It is like a flowchart turned into
 executable code.</p>
+<h2 id="table-of-content---anduril-readme">Table of Content - Anduril
+README</h2>
+<!-- MarkdownTOC -->
+<ul>
+<li><a href="#using-anduril">Using Anduril</a></li>
+<li><a href="#flashing-firmware">Flashing Firmware</a></li>
+<li><a href="#compiling">Compiling</a>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#building">Building</a></li>
+</ul></li>
+<li><a href="#customizing-settings-per-user">Customizing Settings Per
+User</a></li>
+<li><a href="#flashing-programs">Flashing Programs</a>
+<ul>
+<li><a href="#avrdude">AVRdude</a></li>
+<li><a href="#pymcuprog">PyMCUprog</a></li>
+</ul></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<!-- /MarkdownTOC -->
 <h2 id="using-anduril">Using Anduril</h2>
 <p>Anduril has many features, but the only things a person
 <em>really</em> needs to know to use it are:</p>
@@ -161,27 +186,28 @@ documentation.</p>
 <p>Get the latest updates by flashing new firmware!</p>
 <p>A few things are needed to flash firmware:</p>
 <ul>
-<li><p>A firmware “.hex” file. Here’s <a
+<li>A firmware “.hex” file. Here’s <a
 href="https://github.com/class101/anduril-manual-pdf/tree/trunk/docs/which-hex-file.md">how
-to find the right .hex file</a>.</p></li>
-<li><p>A flashing adapter. The type of adapter depends on which MCU chip
+to find the right .hex file</a>.</li>
+<li>A flashing adapter. The type of adapter depends on which MCU chip
 your light uses. It may be an UPDI 3-pin adapter (attiny1616 and newer)
-or an AVR ISP 6-pin adapter (attiny85, attiny1634).</p>
-<p><strong>UPDI</strong> typically uses a “pogo pin” adapter, with
+or an AVR ISP 6-pin adapter (attiny85, attiny1634).<br />
+<strong>UPDI</strong> typically uses a “pogo pin” adapter, with
 spring-loaded pins to hold against copper pads on the driver
-circuit.</p>
-<p><strong>AVR ISP</strong> typically has two parts – a USB device (like
-a USBASP), and a physical adapter (like a pogo pin adapter or SOIC8
-clip). SOIC8 is the least convenient, and is mostly only used on old
-models with attiny85 chips.</p></li>
-<li><p>A firmware flashing program. A few compatible programs include
+circuit.<br />
+<strong>AVR ISP</strong> typically has two parts – a USB device (like a
+USBASP), and a physical adapter (like a pogo pin adapter or SOIC8 clip).
+SOIC8 is the least convenient, and is mostly only used on old models
+with attiny85 chips.</li>
+<li>A firmware flashing program. A few compatible programs include
 <code>avrdude</code>, <code>pymcuprog</code>, and
-<code>ZFlasher</code>.</p></li>
-<li><p>A computer or phone. Almost any modern computer or phone should
-be able to do it, as long as you can plug the adapter in and run a
-flashing program.</p></li>
+<code>ZFlasher</code>.</li>
+<li>A computer or phone. Almost any modern computer or phone should be
+able to do it, as long as you can plug the adapter in and run a flashing
+program.</li>
 </ul>
-<p>One particularly useful guide is at https://anduril.click/ .</p>
+<p>One particularly useful guide is at <a href="https://anduril.click/"
+class="uri">https://anduril.click/</a></p>
 <p>More info about installing flashing programs is below, in <a
 href="#flashing-programs">Flashing Programs</a>.</p>
 <h2 id="compiling">Compiling</h2>
@@ -192,15 +218,15 @@ Linux computer, ideally running Debian or Ubuntu (but almost any distro
 should work). Virtual machines work well, such as running WSL inside
 Windows. There is also a Docker container available (TODO: add link(s)
 here), if that is more convenient.</p>
-<h3 id="prerequisites">Prerequisites:</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
-<li><p>AVR toolchain packages:<br />
-<code>sudo apt install gcc-avr avr-libc binutils-avr</code></p></li>
-<li><p>Other misc packages:<br />
-<code>sudo apt install git wget unzip bash</code></p></li>
-<li><p>Atmel DFPs (Device Family Packs). A small script is included to
+<li>AVR toolchain packages:<br />
+<code>sudo apt install gcc-avr avr-libc binutils-avr</code></li>
+<li>Other misc packages:<br />
+<code>sudo apt install git wget unzip bash</code></li>
+<li>Atmel DFPs (Device Family Packs). A small script is included to
 download and install these for you:<br />
-<code>./make dfp</code></p></li>
+<code>./make dfp</code></li>
 </ul>
 <h3 id="building">Building</h3>
 <p>Use the <code>make</code> script included in this repo. Run
@@ -221,8 +247,8 @@ your favorite settings can be applied automatically without having to
 modify the original source files.</p>
 <h2 id="flashing-programs">Flashing Programs</h2>
 <h3 id="avrdude">AVRdude</h3>
-<p>Usually avrdude installs in a single command:</p>
-<p><code>sudo apt install avrdude</code></p>
+<p>Usually avrdude installs in a single command:<br />
+<code>sudo apt install avrdude</code></p>
 <h3 id="pymcuprog">PyMCUprog</h3>
 <p>If you use <code>pymcuprog</code> to flash firmware, a few extras are
 needed:</p>
@@ -236,17 +262,16 @@ until the shell is closed or until you run <code>deactivate</code>.</p>
 <h2 id="contributing">Contributing</h2>
 <p>If you’d like to help, there are several ways…</p>
 <ul>
-<li><p>ToyKeeper has a <a href="https://patreon.com/ToyKeeper">Patreon
+<li>ToyKeeper has a <a href="https://patreon.com/ToyKeeper">Patreon
 site</a> for donations, to help figuratively and literally keep the
-lights on.</p></li>
-<li><p>Send pull requests or patches, to improve things directly. These
-can be code, documentation, tools, or anything you think is
-useful.</p></li>
-<li><p>File bug reports for any problems you find.</p></li>
-<li><p>Answer people’s questions on public forums. If the same questions
-come up a lot, consider adding it to the documentation here.</p></li>
-<li><p>Ask manufacturers to use this firmware, and to support its
-development.</p></li>
+lights on.</li>
+<li>Send pull requests or patches, to improve things directly. These can
+be code, documentation, tools, or anything you think is useful.</li>
+<li>File bug reports for any problems you find.</li>
+<li>Answer people’s questions on public forums. If the same questions
+come up a lot, consider adding it to the documentation here.</li>
+<li>Ask manufacturers to use this firmware, and to support its
+development.</li>
 </ul>
 <h1 id="anduril-user-manual">Anduril User Manual</h1>
 <p>Anduril is an open-source firmware for flashlights, distributed under
@@ -262,7 +287,8 @@ of late 2023, this is where it redirects to:</p>
 <li><a href="https://github.com/ToyKeeper/anduril"
 class="uri">https://github.com/ToyKeeper/anduril</a></li>
 </ul>
-<h2 id="table-of-content">Table of Content</h2>
+<h2 id="table-of-content---anduril-manual">Table of Content - Anduril
+MANUAL</h2>
 <!-- MarkdownTOC -->
 <ul>
 <li><a href="#quick-start">Quick Start</a></li>

@@ -1,3 +1,11 @@
+---
+title: "Anduril README"
+author: © Selene ToyKeeper
+date: "2024-08-22"
+keywords: [Anduril, Flashlight]
+lang: "en"
+...
+
 # Anduril Flashlight Firmware + FSM Flashlight UI Toolkit
 
 Anduril is a user interface for flashlights.  It is written with FSM, a UI
@@ -8,14 +16,30 @@ you like, such as "Flashlight" or whatever suits your mood.  FSM also means
 "Finite State Machine", which is the type of abstraction used for defining user
 interfaces.  It is like a flowchart turned into executable code.
 
+## Table of Content - Anduril README
+
+<!-- MarkdownTOC -->
+
+- [Using Anduril](#using-anduril)
+- [Flashing Firmware](#flashing-firmware)
+- [Compiling](#compiling)
+    - [Prerequisites](#prerequisites)
+    - [Building](#building)
+- [Customizing Settings Per User](#customizing-settings-per-user)
+- [Flashing Programs](#flashing-programs)
+    - [AVRdude](#avrdude)
+    - [PyMCUprog](#pymcuprog)
+- [Contributing](#contributing)
+
+<!-- /MarkdownTOC -->
 
 ## Using Anduril
 
 Anduril has many features, but the only things a person *really* needs to know
 to use it are:
 
-  - Click for on/off
-  - Hold to change brightness
+- Click for on/off
+- Hold to change brightness
 
 For more in-depth use, read its [user manual](docs/anduril-manual.md)
 for full details.
@@ -26,39 +50,30 @@ For info about hardware-specific features, like what the channel modes are on
 multi-channel lights, browse into the [hw/](hw/) directories to find the
 hardware model and any hardware-specific documentation.
 
-
 ## Flashing Firmware
 
 Get the latest updates by flashing new firmware!
 
 A few things are needed to flash firmware:
 
-  - A firmware ".hex" file.  Here's
-    [how to find the right .hex file](docs/which-hex-file.md).
-
-  - A flashing adapter.  The type of adapter depends on which MCU chip your
-    light uses.  It may be an UPDI 3-pin adapter (attiny1616 and newer) or an
-    AVR ISP 6-pin adapter (attiny85, attiny1634).
-
+- A firmware ".hex" file.  Here's [how to find the right .hex file](docs/which-hex-file.md).
+- A flashing adapter.  The type of adapter depends on which MCU chip your
+light uses.  It may be an UPDI 3-pin adapter (attiny1616 and newer) or an
+AVR ISP 6-pin adapter (attiny85, attiny1634).  
     **UPDI** typically uses a "pogo pin" adapter, with spring-loaded pins to
-    hold against copper pads on the driver circuit.
-
+hold against copper pads on the driver circuit.  
     **AVR ISP** typically has two parts -- a USB device (like a USBASP), and a
-    physical adapter (like a pogo pin adapter or SOIC8 clip).  SOIC8 is the
-    least convenient, and is mostly only used on old models with attiny85
-    chips.
+physical adapter (like a pogo pin adapter or SOIC8 clip).  SOIC8 is the
+least convenient, and is mostly only used on old models with attiny85
+chips.
+- A firmware flashing program.  A few compatible programs include
+`avrdude`, `pymcuprog`, and `ZFlasher`.
+- A computer or phone.  Almost any modern computer or phone should be able to
+do it, as long as you can plug the adapter in and run a flashing program.
 
-  - A firmware flashing program.  A few compatible programs include
-    `avrdude`, `pymcuprog`, and `ZFlasher`.
+One particularly useful guide is at <https://anduril.click/>
 
-  - A computer or phone.  Almost any modern computer or phone should be able to
-    do it, as long as you can plug the adapter in and run a flashing program.
-
-One particularly useful guide is at https://anduril.click/ .
-
-More info about installing flashing programs is below, in
-[Flashing Programs](#flashing-programs).
-
+More info about installing flashing programs is below, in [Flashing Programs](#flashing-programs).
 
 ## Compiling
 
@@ -71,17 +86,15 @@ Virtual machines work well, such as running WSL inside Windows.  There is also
 a Docker container available (TODO: add link(s) here), if that is more
 convenient.
 
-### Prerequisites:
+### Prerequisites
 
 - AVR toolchain packages:  
-  `sudo apt install gcc-avr avr-libc binutils-avr`
-
+    `sudo apt install gcc-avr avr-libc binutils-avr`
 - Other misc packages:  
-  `sudo apt install git wget unzip bash`
-
-- Atmel DFPs (Device Family Packs).  A small script is included to
-  download and install these for you:  
-  `./make dfp`
+    `sudo apt install git wget unzip bash`
+- Atmel DFPs (Device Family Packs). A small script is included to download and
+install these for you:  
+    `./make dfp`
 
 ### Building
 
@@ -94,7 +107,6 @@ firmwares for Hanklights with optional boost drivers.
 The compiled firmware goes into the `hex/` directory, ready to be used by any
 firmware flashing program.
 
-
 ## Customizing Settings Per User
 
 The build can be [customized per user](docs/per-user-config.md) by placing
@@ -102,13 +114,11 @@ overrides into the `users/myname/` directory and letting the build script know
 your username.  That way, your favorite settings can be applied automatically
 without having to modify the original source files.
 
-
 ## Flashing Programs
 
 ### AVRdude
 
-Usually avrdude installs in a single command:
-
+Usually avrdude installs in a single command:  
 `sudo apt install avrdude`
 
 ### PyMCUprog
@@ -126,21 +136,15 @@ You'll need to `source .venv/bin/activate` every time you start a fresh shell,
 if you want to use pymcuprog.  The activation lasts until the shell is
 closed or until you run `deactivate`.
 
-
 ## Contributing
 
 If you'd like to help, there are several ways...
 
-  - ToyKeeper has a [Patreon site](https://patreon.com/ToyKeeper) for
-    donations, to help figuratively and literally keep the lights on.
-
-  - Send pull requests or patches, to improve things directly.  These can be
-    code, documentation, tools, or anything you think is useful.
-
-  - File bug reports for any problems you find.
-
-  - Answer people's questions on public forums.  If the same questions come up
-    a lot, consider adding it to the documentation here.
-
-  - Ask manufacturers to use this firmware, and to support its development.
-
+- ToyKeeper has a [Patreon site](https://patreon.com/ToyKeeper) for
+donations, to help figuratively and literally keep the lights on.
+- Send pull requests or patches, to improve things directly.  These can be
+code, documentation, tools, or anything you think is useful.
+- File bug reports for any problems you find.
+- Answer people's questions on public forums. If the same questions come up
+a lot, consider adding it to the documentation here.
+- Ask manufacturers to use this firmware, and to support its development.

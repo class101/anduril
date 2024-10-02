@@ -1,6 +1,6 @@
 ---
 title: "Anduril User Manual"
-author: Selene ToyKeeper
+author: © Selene ToyKeeper
 date: "2024-08-22"
 keywords: [Anduril, Flashlight]
 lang: "en"
@@ -19,7 +19,7 @@ this is where it redirects to:
 
 - <https://github.com/ToyKeeper/anduril>
 
-## Table of Content
+## Table of Content - Anduril MANUAL
 
 <!-- MarkdownTOC -->
 
@@ -89,12 +89,12 @@ For a full list of button mappings, scroll down to the
 
 Button presses are abbreviated using a simple notation:
 
-- `1C`: **One click.**  Press and then quickly release the button.
-- `1H`: **Hold.**  Press the button, but keep holding it.
-- `2C`: **Two clicks.**  Press and release quickly, twice.
-- `2H`: **Click, hold.**  Click two times, but hold the second press.
-- `3C`: **Three clicks.**  Press and release quickly, three times.
-- `3H`: **Click, click, hold.**  Click three times, but hold the final press.
+- `1C`: **One click.** Press and then quickly release the button.
+- `1H`: **Hold.** Press the button, but keep holding it.
+- `2C`: **Two clicks.** Press and release quickly, twice.
+- `2H`: **Click, hold.** Click two times, but hold the second press.
+- `3C`: **Three clicks.** Press and release quickly, three times.
+- `3H`: **Click, click, hold.** Click three times, but hold the final press.
 
 The same pattern is used with higher numbers too.  
 For example, `10C` means ten clicks...  and `10H` means ten clicks but hold the
